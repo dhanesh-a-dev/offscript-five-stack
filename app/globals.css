@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --bg-main: #080D1C;
-  --glass-surface: rgba(22, 32, 62, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.12);
-  --text-main: #F4F5FF;
-  --text-muted: #9CA8C7;
-  --accent-violet: #6558F5;
+  --bg-main: #060914;
+  --glass-surface: rgba(16, 23, 44, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --text-main: #F4F6FC;
+  --text-muted: #8E9BB5;
+  --accent-violet: #6366F1;
   --accent-blue: #38BDF8;
 }
 
 .light {
-  --bg-main: #F3F6FC;
+  --bg-main: #F4F7FB;
   --glass-surface: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-border: rgba(0, 0, 0, 0.06);
   --text-main: #0F172A;
   --text-muted: #64748B;
-  --accent-violet: #5444E5;
+  --accent-violet: #4F46E5;
   --accent-blue: #0284C7;
 }
 
@@ -28,66 +28,71 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: -0.011em;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 80%, rgba(56, 189, 248, 0.06), transparent);
+  background-attachment: fixed;
 }
 
-/* Glassmorphism Classes */
+/* Refined Glassmorphism Cards */
 .glass-panel {
-  background: rgba(18, 26, 52, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+  background: rgba(14, 21, 40, 0.58);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.35);
 }
 
 .light .glass-panel {
   background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 25px -4px rgba(0, 0, 0, 0.05);
 }
 
 .glass-panel-interactive {
-  background: rgba(18, 26, 52, 0.60);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(14, 21, 40, 0.50);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-panel-interactive:hover {
-  background: rgba(28, 40, 78, 0.75);
-  border-color: rgba(101, 88, 245, 0.35);
+  background: rgba(22, 33, 62, 0.70);
+  border-color: rgba(99, 102, 241, 0.28);
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px -4px rgba(101, 88, 245, 0.15);
+  box-shadow: 0 14px 35px -6px rgba(0, 0, 0, 0.4), 0 0 20px -4px rgba(99, 102, 241, 0.12);
 }
 
 .light .glass-panel-interactive {
   background: rgba(255, 255, 255, 0.90);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .light .glass-panel-interactive:hover {
   background: #FFFFFF;
-  border-color: rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.25);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.07);
 }
 
-/* Glow effects */
-.glow-violet {
-  box-shadow: 0 0 20px -3px rgba(101, 88, 245, 0.4);
+/* Subtle Glows */
+.shadow-glow {
+  box-shadow: 0 0 22px -4px rgba(99, 102, 241, 0.35);
 }
 
-.glow-blue {
-  box-shadow: 0 0 20px -3px rgba(56, 189, 248, 0.35);
+.shadow-glow-cyan {
+  box-shadow: 0 0 22px -4px rgba(56, 189, 248, 0.30);
 }
 
-/* Custom scrollbars */
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -95,18 +100,18 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .light ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .light ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.22);
 }

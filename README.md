@@ -180,3 +180,4 @@ The project is zero-configuration and 100% Vercel-ready.
 
 ## 👥 Hackathon Team
 Built with passion by the **Perseus Hero Team** for the 2026 Campus Innovation Hackathon.
+

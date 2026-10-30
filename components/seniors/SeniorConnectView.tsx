@@ -245,3 +245,4 @@ export const SeniorConnectView: React.FC<SeniorConnectViewProps> = ({
     </div>
   );
 };
+

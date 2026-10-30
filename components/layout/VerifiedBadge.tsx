@@ -72,3 +72,4 @@ export const VerifiedBadge: React.FC<VerifiedBadgeProps> = ({ source, size = 'sm
     </div>
   );
 };
+

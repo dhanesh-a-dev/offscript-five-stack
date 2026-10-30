@@ -554,3 +554,4 @@ export const AdminPanelView: React.FC<AdminPanelViewProps> = ({
     </div>
   );
 };
+

@@ -535,3 +535,4 @@ export const ClubsEventsView: React.FC<ClubsEventsViewProps> = ({
     </div>
   );
 };
+

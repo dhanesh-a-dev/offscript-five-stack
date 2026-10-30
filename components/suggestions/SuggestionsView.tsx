@@ -359,3 +359,4 @@ export const SuggestionsView: React.FC<SuggestionsViewProps> = ({
     </div>
   );
 };
+

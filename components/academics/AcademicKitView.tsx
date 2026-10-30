@@ -393,3 +393,4 @@ export const AcademicKitView: React.FC<AcademicKitViewProps> = ({
     </div>
   );
 };
+
