@@ -14,16 +14,16 @@ export const VerifiedBadge: React.FC<VerifiedBadgeProps> = ({ source, size = 'sm
       case 'Official University Information':
         return {
           icon: ShieldCheck,
-          text: 'Official University Info',
-          bg: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400',
+          text: 'Official University',
+          bg: 'bg-emerald-500/[0.08] border-emerald-500/25 text-emerald-300',
           dot: 'bg-emerald-400',
           tooltip: 'Verified and authorized by Aurelia University Administration.'
         };
       case 'Verified Perseus Team Update':
         return {
           icon: Award,
-          text: 'Verified Perseus Team',
-          bg: 'bg-cyan-500/10 border-cyan-500/30 text-cyan-400',
+          text: 'Verified Perseus',
+          bg: 'bg-cyan-500/[0.08] border-cyan-500/25 text-cyan-300',
           dot: 'bg-cyan-400',
           tooltip: 'Published by the student Perseus core engineering board.'
         };
@@ -31,24 +31,24 @@ export const VerifiedBadge: React.FC<VerifiedBadgeProps> = ({ source, size = 'sm
         return {
           icon: Users,
           text: 'Club Announcement',
-          bg: 'bg-indigo-500/10 border-indigo-500/30 text-indigo-400',
+          bg: 'bg-indigo-500/[0.08] border-indigo-500/25 text-indigo-300',
           dot: 'bg-indigo-400',
           tooltip: 'Issued by an officially registered Aurelia campus club or society.'
         };
       case 'Sponsored / Promoted':
         return {
           icon: Sparkles,
-          text: 'Sponsored / Promoted',
-          bg: 'bg-amber-500/15 border-amber-500/40 text-amber-300',
+          text: 'Sponsored',
+          bg: 'bg-amber-500/[0.1] border-amber-500/30 text-amber-300',
           dot: 'bg-amber-400',
-          tooltip: 'Promoted partnership or sponsored hackathon initiative. Demo campaign.'
+          tooltip: 'Promoted partnership or sponsored hackathon initiative.'
         };
       case 'Student Submitted':
       default:
         return {
           icon: User,
           text: 'Student Submitted',
-          bg: 'bg-purple-500/10 border-purple-500/25 text-purple-300',
+          bg: 'bg-purple-500/[0.08] border-purple-500/20 text-purple-300',
           dot: 'bg-purple-400',
           tooltip: 'Crowdsourced peer submission by an Aurelia student.'
         };
@@ -62,14 +62,13 @@ export const VerifiedBadge: React.FC<VerifiedBadgeProps> = ({ source, size = 'sm
   return (
     <div 
       className={`inline-flex items-center gap-1.5 rounded-full border ${config.bg} ${
-        isSmall ? 'px-2.5 py-0.5 text-xs font-medium' : 'px-3 py-1 text-sm font-medium'
+        isSmall ? 'px-2.5 py-0.5 text-[11px] font-medium' : 'px-3 py-1 text-xs font-medium'
       }`}
       title={config.tooltip}
     >
-      <Icon className={isSmall ? "w-3.5 h-3.5 shrink-0" : "w-4 h-4 shrink-0"} />
+      <span className={`w-1.5 h-1.5 rounded-full ${config.dot}`} />
       <span>{config.text}</span>
-      {showDetails && <span className="opacity-60 text-[10px] ml-1">(Demo Verified)</span>}
+      {showDetails && <span className="opacity-50 text-[10px] ml-0.5 font-mono">Demo</span>}
     </div>
   );
 };
-
