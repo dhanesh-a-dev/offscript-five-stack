@@ -15,32 +15,32 @@ export const VerifiedBadge: React.FC<VerifiedBadgeProps> = ({ source, size = 'sm
         return {
           icon: ShieldCheck,
           text: 'Official University',
-          bg: 'bg-emerald-500/[0.08] border-emerald-500/25 text-emerald-300',
-          dot: 'bg-emerald-400',
+          bg: 'bg-[#080D18] shadow-[inset_1px_1px_3px_#04060B] border-emerald-500/30 text-emerald-300',
+          dot: 'bg-emerald-400 shadow-[0_0_6px_#10B981]',
           tooltip: 'Verified and authorized by Aurelia University Administration.'
         };
       case 'Verified Perseus Team Update':
         return {
           icon: Award,
           text: 'Verified Perseus',
-          bg: 'bg-cyan-500/[0.08] border-cyan-500/25 text-cyan-300',
-          dot: 'bg-cyan-400',
+          bg: 'bg-[#080D18] shadow-[inset_1px_1px_3px_#04060B] border-cyan-500/30 text-cyan-300',
+          dot: 'bg-cyan-400 shadow-[0_0_6px_#38BDF8]',
           tooltip: 'Published by the student Perseus core engineering board.'
         };
       case 'Club Announcement':
         return {
           icon: Users,
           text: 'Club Announcement',
-          bg: 'bg-indigo-500/[0.08] border-indigo-500/25 text-indigo-300',
-          dot: 'bg-indigo-400',
+          bg: 'bg-[#080D18] shadow-[inset_1px_1px_3px_#04060B] border-indigo-500/30 text-indigo-300',
+          dot: 'bg-indigo-400 shadow-[0_0_6px_#818CF8]',
           tooltip: 'Issued by an officially registered Aurelia campus club or society.'
         };
       case 'Sponsored / Promoted':
         return {
           icon: Sparkles,
           text: 'Sponsored',
-          bg: 'bg-amber-500/[0.1] border-amber-500/30 text-amber-300',
-          dot: 'bg-amber-400',
+          bg: 'bg-[#080D18] shadow-[inset_1px_1px_3px_#04060B] border-amber-500/35 text-amber-300',
+          dot: 'bg-amber-400 shadow-[0_0_6px_#FBBF24]',
           tooltip: 'Promoted partnership or sponsored hackathon initiative.'
         };
       case 'Student Submitted':
@@ -48,8 +48,8 @@ export const VerifiedBadge: React.FC<VerifiedBadgeProps> = ({ source, size = 'sm
         return {
           icon: User,
           text: 'Student Submitted',
-          bg: 'bg-purple-500/[0.08] border-purple-500/20 text-purple-300',
-          dot: 'bg-purple-400',
+          bg: 'bg-[#080D18] shadow-[inset_1px_1px_3px_#04060B] border-purple-500/25 text-purple-300',
+          dot: 'bg-purple-400 shadow-[0_0_6px_#C084FC]',
           tooltip: 'Crowdsourced peer submission by an Aurelia student.'
         };
     }
